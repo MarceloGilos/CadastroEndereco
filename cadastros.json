@@ -1,0 +1,50 @@
+[
+  {
+    "nome": "Fernanda",
+    "idade": "30",
+    "Endereco": {
+      "cep": "02401-100",
+      "logradouro": "Rua Voluntários da Pátria",
+      "complemento": "de 2601 a 2899 - lado ímpar",
+      "bairro": "Santana",
+      "localidade": "São Paulo",
+      "uf": "SP"
+    }
+  },
+  {
+    "nome": "Pokemon",
+    "idade": "02401200",
+    "Endereco": {
+      "cep": "02401-200",
+      "logradouro": "Rua Voluntários da Pátria",
+      "complemento": "de 2901 a 3399 - lado ímpar",
+      "bairro": "Santana",
+      "localidade": "São Paulo",
+      "uf": "SP"
+    }
+  },
+  {
+    "nome": "Lia",
+    "idade": "60",
+    "Endereco": {
+      "cep": "02401-100",
+      "logradouro": "Rua Voluntários da Pátria",
+      "complemento": "de 2601 a 2899 - lado ímpar",
+      "bairro": "Santana",
+      "localidade": "São Paulo",
+      "uf": "SP"
+    }
+  },
+  {
+    "nome": "Marcelo",
+    "idade": "30",
+    "Endereco": {
+      "cep": "02401-100",
+      "logradouro": "Rua Voluntários da Pátria",
+      "complemento": "de 2601 a 2899 - lado ímpar",
+      "bairro": "Santana",
+      "localidade": "São Paulo",
+      "uf": "SP"
+    }
+  }
+]

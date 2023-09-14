@@ -72,7 +72,7 @@ public class Endereco {
             System.out.println("CEP invalido");
             return null;    
         }else{
-            return TratamentoApi.converterJsonEndereco(TratamentoApi.requisitorApiEndereco(cep));
+            return (Endereco) TratamentoApi.converterJsonEndereco(TratamentoApi.requisitorApiEndereco(cep));
         }
     }
 
