@@ -1,7 +1,6 @@
 package com.gilos.marcelo.metodos;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
@@ -18,10 +17,7 @@ public class Arquivar {
 
     public static String lerArquivo() throws IOException {
 
-        String json = String.join(" ",
-                Files.readAllLines(
-                        Paths.get("cadastros.json"),
-                        StandardCharsets.UTF_8));
+        String json = String.join(" ",Files.readAllLines(Paths.get("cadastros.json")));
                         return json;
     }
 

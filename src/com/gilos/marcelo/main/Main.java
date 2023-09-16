@@ -12,7 +12,6 @@ import com.gilos.marcelo.metodos.Cadastro;
 import com.gilos.marcelo.metodos.LimparTela;
 import com.gilos.marcelo.metodos.TratamentoApi;
 
-
 public class Main {
     public static final Scanner SCANNER = new Scanner(System.in);
 
@@ -21,7 +20,12 @@ public class Main {
         int contadorCadastro = 0;
         boolean sair = false;
         int menuEscolha;
-        listaCadastro = TratamentoApi.converterJsonBdb(Arquivar.lerArquivo());
+
+        try {
+            listaCadastro = TratamentoApi.converterJsonBdb(Arquivar.lerArquivo());
+        } catch (Exception e) {
+
+        }
         while (sair == false) {
             System.out.println("Bem-vindo ao cadastro de pessoas");
             System.out.println("""
@@ -29,7 +33,7 @@ public class Main {
                     1-Adicionar nova pessoa
                     2-Excluir pessoa
                     3-Listar pessoas
-                    4-Buscar pessoas
+                    4-Buscar pessoa
                     5-Sair
                     """);
             System.out.println("Opção:");
@@ -41,10 +45,19 @@ public class Main {
                     System.out.println("\nCadastro feito com sucesso");
                     break;
                 case 2:
+                    System.out.println("Qual o nome da Pessoa:");
+                    String nome = SCANNER.nextLine();
+                    if (Cadastro.deletarPessoa(listaCadastro, nome) != null) {
+                        listaCadastro.remove(Integer.parseInt(Cadastro.deletarPessoa(listaCadastro, nome)));
+                        System.out.println(nome + " deletado com sucesso");
+                    }else{
+                        System.out.println("Pessoa não esta na lista");
+                    }
+
                     break;
                 case 3:
                     for (Pessoa pessoa : listaCadastro) {
-                        System.out.println(pessoa.toString()+"\n");
+                        System.out.println(pessoa.toString() + "\n");
                     }
                     break;
                 case 4:
